@@ -17,13 +17,12 @@
         <div class="container">
 
             <div class="row grid gap-4">
-                <button type="button" id="01" class="col-2 btn btn-outline-light btn-lg py-2" data-bs-toggle="modal" data-bs-target="#doorModal">1</button>
-                <button type="button" id="02" class="col-2 btn btn-outline-light btn-lg py-2" data-bs-toggle="modal" data-bs-target="#doorModal">2</button>
-                <div class="col-2 grid-item">2</div>
-                <div class="col-2 grid-item">3</div>
-                <div class="col-2 grid-item">4</div>
-                <div class="col-2 grid-item">5</div>
-                <div class="col-2 grid-item">6</div>
+                <?php
+                    for ($i = 1; $i <= 24; $i++) {
+                        echo "<button type='button' id='0" . $i . "' class='col-2 btn btn-outline-light btn-lg py-2' data-bs-toggle='modal' data-bs-target='#doorModal'>" . $i . "</button>";
+                        
+                    }
+                ?>
             </div>
       
             <!-- Repeat --> 
@@ -69,9 +68,12 @@
                             <div class="mb-3">
                             <label for="day-select" class="form-label">Tag auswählen</label>
                             <select class="form-select" id="day-select" aria-label="Day selection">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                            <?php
+                                for ($j = 1; $j <= 24; $j++) {
+                                    echo "<option value='0". $j ."'>". $j ."</option>";
+                                    
+                                }
+                            ?>
                             </select>
                             </div>
                             <div class="mb-3">
