@@ -14,6 +14,7 @@ RUN chmod 640 /var/www/html/.htpasswd
 
 COPY *.php /var/www/html/
 COPY php.ini /var/www/html/
+COPY favicon.ico /var/www/html/
 RUN mkdir -p /var/www/html/pics
 RUN chown www-data:www-data /var/www/html/pics
 RUN chmod 775 /var/www/html/pics
