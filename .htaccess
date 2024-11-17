@@ -1,0 +1,6 @@
+<IfModule mod_auth_basic.c>
+    AuthType Basic
+    AuthName "Adventskalender"
+    AuthUserFile /var/www/html/.htpasswd
+    Require valid-user
+</IfModule>
